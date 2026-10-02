@@ -18,3 +18,9 @@
 - github每个项目都有一个或者多个git repo
 - 现有repo才能让git管理你的仓库
 
+## 4. commit & branches
+对commit和branch的基本认识
+- 箭头应该新的指向旧的
+- branch在指向commit而不是在箭头上
+![](branch.canvas)
+
