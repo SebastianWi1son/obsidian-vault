@@ -1,0 +1,263 @@
+{
+  "main": {
+    "id": "48e820c49d79faaf",
+    "type": "split",
+    "children": [
+      {
+        "id": "4567644059ef8381",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9da0f3b7bbd29ce2",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Projects/Foucault/ArchitectureMap.canvas",
+                "viewState": {
+                  "x": 340,
+                  "y": 1580,
+                  "zoom": -1.4922053598013036
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "ArchitectureMap"
+            }
+          },
+          {
+            "id": "63258c9c1f615aa8",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Projects/Lunokhod/ArchitectureMap.canvas",
+                "viewState": {
+                  "x": -32.99507956784579,
+                  "y": 100.8415219034751,
+                  "zoom": 0.3999999999999999
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "ArchitectureMap"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a8cf47013ad76d55",
+    "type": "split",
+    "children": [
+      {
+        "id": "1153ce32c7b4d119",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a60c731269af404",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a966fc33c8242b73",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ebd946b134e06bfe",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "c0b1517e7fcf70cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8e5b4b4197a824f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4db1366d1cfcac41",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "English/2026-08-07.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "66b4b291c9abbe2f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "English/2026-08-07.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7df49e638091d6da",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0ccbc38ebfbf0591",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "dd2260726c57c1ed",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "English/2026-08-07.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "63258c9c1f615aa8",
+  "lastOpenFiles": [
+    "Git/git premier/asset/Untitled.canvas",
+    "Git/git premier/Main.md",
+    "Git/git premier/asset/branch.canvas",
+    "Git/git premier/asset",
+    "Git/git premier",
+    "Git/Untitled",
+    "Git/branch.canvas",
+    "Git/Untitled.canvas",
+    "Git/Premier.md",
+    "Git",
+    "legacy/Linux/04-字体渲染与显示缩放.md",
+    "legacy/Linux/01-deb与包管理.md",
+    "legacy/Linux/06-Wayland截图与portal.md",
+    "legacy/Linux/05-fcitx5输入法架构.md",
+    "legacy/Linux/07-Linux剪贴板机制.md",
+    "legacy/Linux/02-配置文件的归属权.md",
+    "legacy/Linux/03-Wayland与X11架构.md",
+    "legacy/Linux/10-GNOME扩展开发.md",
+    "legacy/Linux/08-系统自省方法.md",
+    "legacy/Linux/09-跨系统数据摆渡与备份验证.md",
+    "legacy/Linux/00-索引.md",
+    "legacy/Linux",
+    "Untitled.canvas",
+    "win10-syncthing-方案B-交接文档.md",
+    "CPP/tutorial_llfc/cpp/C25-智能指针/SImpleSharedPtr.canvas",
+    "CPP/tutorial_llfc/cpp/C25-智能指针/Main.md",
+    "English/English_Knowledge_Points.md",
+    "CPP/tutorial_llfc/cpp/C25-智能指针",
+    "English/2026-08-07.md",
+    "English/2026-08-06.md",
+    "Projects/Foucault/ArchitectureMap.canvas",
+    "Projects/Foucault/assets/Mahony PI控制器.md",
+    "Projects/Foucault/assets/struct IMUSample.md",
+    "Projects/Lunokhod/ArchitectureMap.canvas",
+    "Projects/Lunokhod/Main.md",
+    "Projects/Cyclotron/cyclotron/2026-08-23-alignment状态机开发经验.md",
+    "AI Develop/Untitled.md",
+    "Untitled 1.md",
+    "AI Develop",
+    "Projects/Foucault/Main.md",
+    "Projects/Foucault/Schedule.canvas",
+    "Projects/Foucault/ArchitectureMap_v2.canvas",
+    "Projects/Foucault/assets",
+    "Projects/Foucault",
+    "Projects/Lunokhod",
+    "CMake/CMakeLists通用写法.canvas",
+    "ROS2/level1-tutorial/C2-ROS2 Tools/assets/Main/file-20260911143358074.png"
+  ]
+}

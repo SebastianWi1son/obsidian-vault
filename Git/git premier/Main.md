@@ -1,4 +1,4 @@
-## 1. Git 解决什么问题
+![](asset/merge.canvas)## 1. Git 解决什么问题
 ### 1.1 单线迭代
 如何保证我加新功能不会把整个项目搞炸--commit
 ### 1.2 并行开发
@@ -22,5 +22,12 @@
 对commit和branch的基本认识
 - 箭头应该新的指向旧的
 - branch在指向commit而不是在箭头上
-![](branch.canvas)
+![](asset/branch.canvas)
+## 5. merge
+- merge先回main
+- 从最近的公共commit开始计算
+- HEAD指向谁，谁就移动
+- main来"拉取"develop
+![](asset/merge.canvas)
 
+## 6. merge conflict
