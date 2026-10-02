@@ -28,6 +28,7 @@
 - 从最近的公共commit开始计算
 - HEAD指向谁，谁就移动
 - main来"拉取"develop
+- 拒绝fast-forward merge
 ![](asset/merge.canvas)
 
 ## 6. merge conflict
