@@ -7,3 +7,4 @@
 ## 3. git clone URL name
 
 ## 4. fetch
+> 绝对安全，不覆盖篡改本地状态
