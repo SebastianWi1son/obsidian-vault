@@ -18,3 +18,7 @@ MAJOR.MINOR.PATCH
 - 嫁接变基，拉直commit chain
 - 过程中可能会有多次merge conflict
 ![](asset/rebase.canvas)
+## 4. 
+### 4.1 amend
+### 4.2 stash
+### 4.3 checkout detached
