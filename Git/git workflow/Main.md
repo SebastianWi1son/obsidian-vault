@@ -5,3 +5,6 @@
 MAJOR.MINOR.PATCH
   2  .  3  .  1
 ```
+- **MAJOR:** 有不兼容的API更新
+- **MINOR:** 有向后兼容的功能更新
+- **PATCH:** 无新功能,修旧版本bug
