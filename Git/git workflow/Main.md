@@ -14,3 +14,7 @@ MAJOR.MINOR.PATCH
 
 - **跟进:** 有新的branch在旧分支进行了修改，先将该分支的修改pull进本分支
 
+## 3. `rebase`
+- 嫁接变基，拉直commit chain
+- 过程中可能会有多次merge conflict
+![](asset/rebase.canvas)
