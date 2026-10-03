@@ -1,0 +1,319 @@
+{
+	"nodes": [
+		{
+			"id": "c0e6c63911da8cc0",
+			"type": "text",
+			"text": "commit_01",
+			"styleAttributes": {},
+			"x": -1505,
+			"y": -45,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "636ac9f9c1cef540",
+			"type": "text",
+			"text": "commit_02",
+			"styleAttributes": {},
+			"x": -1165,
+			"y": -45,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "5485710b36e881a2",
+			"type": "text",
+			"text": "commit_03",
+			"styleAttributes": {},
+			"x": -845,
+			"y": -45,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "0f362eef2fad2cc0",
+			"type": "text",
+			"text": "commit_04",
+			"styleAttributes": {},
+			"x": -445,
+			"y": -205,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "b711a297480eebaf",
+			"type": "text",
+			"text": "commit_06",
+			"styleAttributes": {},
+			"x": -125,
+			"y": -205,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "2696efe60bc239b9",
+			"type": "text",
+			"text": "commit_05",
+			"styleAttributes": {},
+			"x": -445,
+			"y": 155,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "c120d35c0232324b",
+			"type": "text",
+			"text": "commit_07",
+			"styleAttributes": {},
+			"x": -125,
+			"y": 155,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "df69d5110e8a7ddf",
+			"type": "text",
+			"text": "commit_08",
+			"styleAttributes": {},
+			"x": 235,
+			"y": 155,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "376eb7680903c8d9",
+			"type": "text",
+			"text": "commit_09",
+			"styleAttributes": {},
+			"x": 575,
+			"y": 155,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "b3265da489a27530",
+			"type": "text",
+			"text": "commit_10",
+			"styleAttributes": {},
+			"x": 235,
+			"y": -205,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "23bfbfeee11e46ad",
+			"type": "text",
+			"text": "merge_commit(dev)",
+			"styleAttributes": {},
+			"x": 970,
+			"y": 155,
+			"width": 260,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "77ee6534232061c7",
+			"type": "text",
+			"text": "merge_commit(master)",
+			"styleAttributes": {},
+			"x": 1600,
+			"y": -205,
+			"width": 260,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "a1caeb0084bf7106",
+			"type": "text",
+			"text": "main",
+			"styleAttributes": {},
+			"x": 1600,
+			"y": -380,
+			"width": 260,
+			"height": 60,
+			"color": "1"
+		},
+		{
+			"id": "b47947c7380c883b",
+			"type": "text",
+			"text": "HEAD",
+			"styleAttributes": {},
+			"x": 1600,
+			"y": -540,
+			"width": 260,
+			"height": 60,
+			"color": "2"
+		},
+		{
+			"id": "32b738f9de95c7e6",
+			"type": "text",
+			"text": "develop/v2.0",
+			"styleAttributes": {},
+			"x": 970,
+			"y": 360,
+			"width": 260,
+			"height": 60,
+			"color": "4"
+		}
+	],
+	"edges": [
+		{
+			"id": "e495b220374692e3",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "636ac9f9c1cef540",
+			"fromSide": "left",
+			"toNode": "c0e6c63911da8cc0",
+			"toSide": "right"
+		},
+		{
+			"id": "85defead2901951e",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "5485710b36e881a2",
+			"fromSide": "left",
+			"toNode": "636ac9f9c1cef540",
+			"toSide": "right"
+		},
+		{
+			"id": "9a1a455225690ff3",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "0f362eef2fad2cc0",
+			"fromSide": "left",
+			"toNode": "5485710b36e881a2",
+			"toSide": "right"
+		},
+		{
+			"id": "4688ba6724b2c062",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "2696efe60bc239b9",
+			"fromSide": "left",
+			"toNode": "5485710b36e881a2",
+			"toSide": "right"
+		},
+		{
+			"id": "e3a5754227cbee52",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "b711a297480eebaf",
+			"fromSide": "left",
+			"toNode": "0f362eef2fad2cc0",
+			"toSide": "right"
+		},
+		{
+			"id": "0d52451c56f7b512",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "c120d35c0232324b",
+			"fromSide": "left",
+			"toNode": "2696efe60bc239b9",
+			"toSide": "right"
+		},
+		{
+			"id": "2e4ebbc29453f1a4",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "df69d5110e8a7ddf",
+			"fromSide": "left",
+			"toNode": "c120d35c0232324b",
+			"toSide": "right"
+		},
+		{
+			"id": "f48e122ae3196249",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "376eb7680903c8d9",
+			"fromSide": "left",
+			"toNode": "df69d5110e8a7ddf",
+			"toSide": "right"
+		},
+		{
+			"id": "f39c62037e9225b7",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "b3265da489a27530",
+			"fromSide": "left",
+			"toNode": "b711a297480eebaf",
+			"toSide": "right"
+		},
+		{
+			"id": "7c4ce69e70442b57",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "23bfbfeee11e46ad",
+			"fromSide": "left",
+			"toNode": "376eb7680903c8d9",
+			"toSide": "right"
+		},
+		{
+			"id": "dee5715387d593e3",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "23bfbfeee11e46ad",
+			"fromSide": "left",
+			"toNode": "b3265da489a27530",
+			"toSide": "right"
+		},
+		{
+			"id": "68eca22e506cbc50",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "77ee6534232061c7",
+			"fromSide": "left",
+			"toNode": "b3265da489a27530",
+			"toSide": "right"
+		},
+		{
+			"id": "8de59694c7ffcc55",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "77ee6534232061c7",
+			"fromSide": "left",
+			"toNode": "23bfbfeee11e46ad",
+			"toSide": "right"
+		},
+		{
+			"id": "c1ffd3cf2286ed45",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "a1caeb0084bf7106",
+			"fromSide": "bottom",
+			"toNode": "77ee6534232061c7",
+			"toSide": "top"
+		},
+		{
+			"id": "30bac1545202f8ee",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "b47947c7380c883b",
+			"fromSide": "bottom",
+			"toNode": "a1caeb0084bf7106",
+			"toSide": "top"
+		},
+		{
+			"id": "98f422bd9b5c85e5",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "32b738f9de95c7e6",
+			"fromSide": "top",
+			"toNode": "23bfbfeee11e46ad",
+			"toSide": "bottom"
+		}
+	],
+	"metadata": {
+		"version": "1.0-1.0",
+		"frontmatter": {}
+	}
+}

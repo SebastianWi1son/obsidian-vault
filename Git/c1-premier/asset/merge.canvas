@@ -1,0 +1,270 @@
+{
+	"nodes": [
+		{
+			"id": "507f5bab72a3d3a0",
+			"type": "text",
+			"text": "commit_01",
+			"styleAttributes": {},
+			"x": -1170,
+			"y": -30,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "76470b224862267f",
+			"type": "text",
+			"text": "commit_02",
+			"styleAttributes": {},
+			"x": -830,
+			"y": -30,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "bb75cea7308aa617",
+			"type": "text",
+			"text": "commit_03",
+			"styleAttributes": {},
+			"x": -510,
+			"y": -30,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "47d619f51318dc32",
+			"type": "text",
+			"text": "commit_04",
+			"styleAttributes": {},
+			"x": -110,
+			"y": -190,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "55312f5350e684f4",
+			"type": "text",
+			"text": "commit_06",
+			"styleAttributes": {},
+			"x": 210,
+			"y": -190,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "d026c97c1a19fd81",
+			"type": "text",
+			"text": "commit_05",
+			"styleAttributes": {},
+			"x": -110,
+			"y": 170,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "71bf3b0bf4ed5b71",
+			"type": "text",
+			"text": "commit_07",
+			"styleAttributes": {},
+			"x": 210,
+			"y": 170,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "39621b578976f382",
+			"type": "text",
+			"text": "commit_08",
+			"styleAttributes": {},
+			"x": 570,
+			"y": 170,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "81fd80fdc18ffe59",
+			"type": "text",
+			"text": "commit_09",
+			"styleAttributes": {},
+			"x": 910,
+			"y": 170,
+			"width": 260,
+			"height": 60,
+			"color": "5"
+		},
+		{
+			"id": "9e2de4741293dd8c",
+			"type": "text",
+			"text": "develop/v2.0",
+			"styleAttributes": {},
+			"x": 910,
+			"y": 370,
+			"width": 260,
+			"height": 60,
+			"color": "4"
+		},
+		{
+			"id": "bcf1d1ab65f04271",
+			"type": "text",
+			"text": "merge_commit",
+			"styleAttributes": {},
+			"x": 1260,
+			"y": -190,
+			"width": 260,
+			"height": 60,
+			"color": "6"
+		},
+		{
+			"id": "3516631997f2ff9a",
+			"type": "text",
+			"text": "HEAD",
+			"styleAttributes": {},
+			"x": 1260,
+			"y": -400,
+			"width": 260,
+			"height": 60,
+			"color": "2"
+		},
+		{
+			"id": "4092d19366dc9f44",
+			"type": "text",
+			"text": "main",
+			"styleAttributes": {},
+			"x": 1580,
+			"y": -400,
+			"width": 260,
+			"height": 60,
+			"color": "1"
+		}
+	],
+	"edges": [
+		{
+			"id": "2661ebc0e9bbc6f9",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "76470b224862267f",
+			"fromSide": "left",
+			"toNode": "507f5bab72a3d3a0",
+			"toSide": "right"
+		},
+		{
+			"id": "5d67f558f77e0174",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "bb75cea7308aa617",
+			"fromSide": "left",
+			"toNode": "76470b224862267f",
+			"toSide": "right"
+		},
+		{
+			"id": "11ab0d18947949bf",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "47d619f51318dc32",
+			"fromSide": "left",
+			"toNode": "bb75cea7308aa617",
+			"toSide": "right"
+		},
+		{
+			"id": "e69e003483474e27",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "d026c97c1a19fd81",
+			"fromSide": "left",
+			"toNode": "bb75cea7308aa617",
+			"toSide": "right"
+		},
+		{
+			"id": "35896ee2f9b0cfa7",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "55312f5350e684f4",
+			"fromSide": "left",
+			"toNode": "47d619f51318dc32",
+			"toSide": "right"
+		},
+		{
+			"id": "1791d0abc6f21260",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "71bf3b0bf4ed5b71",
+			"fromSide": "left",
+			"toNode": "d026c97c1a19fd81",
+			"toSide": "right"
+		},
+		{
+			"id": "abaa01b016377a06",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "39621b578976f382",
+			"fromSide": "left",
+			"toNode": "71bf3b0bf4ed5b71",
+			"toSide": "right"
+		},
+		{
+			"id": "a37cfe1a1bfe789f",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "81fd80fdc18ffe59",
+			"fromSide": "left",
+			"toNode": "39621b578976f382",
+			"toSide": "right"
+		},
+		{
+			"id": "39cf4ccab9b7d00b",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "9e2de4741293dd8c",
+			"fromSide": "top",
+			"toNode": "81fd80fdc18ffe59",
+			"toSide": "bottom"
+		},
+		{
+			"id": "60139484245118ad",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "81fd80fdc18ffe59",
+			"fromSide": "right",
+			"toNode": "bcf1d1ab65f04271",
+			"toSide": "bottom"
+		},
+		{
+			"id": "bc2c25f4cadae0e9",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "4092d19366dc9f44",
+			"fromSide": "bottom",
+			"toNode": "bcf1d1ab65f04271",
+			"toSide": "top"
+		},
+		{
+			"id": "77fd0ad92ff85bb1",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "3516631997f2ff9a",
+			"fromSide": "bottom",
+			"toNode": "bcf1d1ab65f04271",
+			"toSide": "top"
+		},
+		{
+			"id": "7928fd10d50a357d",
+			"styleAttributes": {},
+			"toFloating": false,
+			"fromNode": "bcf1d1ab65f04271",
+			"fromSide": "left",
+			"toNode": "55312f5350e684f4",
+			"toSide": "right"
+		}
+	],
+	"metadata": {
+		"version": "1.0-1.0",
+		"frontmatter": {}
+	}
+}

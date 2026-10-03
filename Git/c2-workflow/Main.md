@@ -23,3 +23,5 @@ MAJOR.MINOR.PATCH
 ### 4.2 stash
 ### 4.3 checkout detached
 ### 4.4 git rm --cached 'xx'
+### 4.4 revert
+- 可以指定某个commit进行抵消
