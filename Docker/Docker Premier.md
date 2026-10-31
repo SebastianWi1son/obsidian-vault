@@ -44,6 +44,16 @@
 # 5. Network
 > docker内部创建虚拟网络，通过端口映射
 
+# 6. Compose
+## 6.1 Service
+> A container that interacts with other containers in some way
+> and it has specific runtime properties
+- Service -> container which interacts with other containers
+## 6.2 basic config
+- `image`
+- `container_name`
+- `volumes`
+- 
 
 # 5. Dev Container & Handoff Container
 
