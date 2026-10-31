@@ -34,7 +34,7 @@
 - docker stop container1 /  docker rm container1 停止，移除container1
 ```
 - `docker run -it --name container1 image1` 创建一个新容器，启动它的主程序
-- docker默认执行主程序
+- docker默认执行主程序-ctrl+d可能会结束主程序 (穿透执行解决)
 
 # 4. Docker Data Persistence
 > container's removal doesn't affect data
