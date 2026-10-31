@@ -25,7 +25,6 @@
 - docker pull image
 - (hub.docker.com/-/debian) 
 ```
-
 ## 3.2 container
 ```
 - docker start container1 启动container1的主程序
@@ -45,15 +44,19 @@
 > docker内部创建虚拟网络，通过端口映射
 
 # 6. Compose
-## 6.1 Service
-> A container that interacts with other containers in some way
-> and it has specific runtime properties
-- Service -> container which interacts with other containers
-## 6.2 basic config
-- `image`
-- `container_name`
-- `volumes`
-- 
+## 6.1 `Service`
+> container which interacts with other containers
+## 6.2 `image` `container_name` `volumes` `ports`
+## 6.3 `environment`
+> environment variable
+## 6.4 `restart`
+> restart policy
+- no -> no reset
+- always -> always reset
+- on-failure
+- unless-stopped
+## 6.5 `depends_on`
+> dependency relationship
 
 # 5. Dev Container & Handoff Container
 
