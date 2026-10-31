@@ -1,9 +1,29 @@
 {
 	"nodes":[
-		{"id":"a651b763806e64cb","type":"group","x":320,"y":-220,"width":540,"height":400,"label":"Volume"},
+		{"id":"ea960c94dd6aea58","type":"group","x":-600,"y":-360,"width":2040,"height":960,"label":"Host"},
 		{"id":"d4585269f76700c1","type":"text","text":"Container-1","x":-125,"y":-180,"width":250,"height":60,"color":"5"},
 		{"id":"3de97a9201b90f75","type":"text","text":"Container-2","x":-125,"y":60,"width":250,"height":60,"color":"5"},
-		{"id":"d51baa979b667a74","type":"text","text":"Image","x":-520,"y":-80,"width":220,"height":60,"color":"6"}
+		{"id":"d51baa979b667a74","type":"text","text":"Image","x":-520,"y":-80,"width":220,"height":60,"color":"6"},
+		{
+			"id":"79ab1ccd895c9ae0",
+			"type":"text",
+			"text":"Volume1 (manage by docker)",
+			"styleAttributes":{},
+			"x":540,
+			"y":-180,
+			"width":340,
+			"height":60
+		},
+		{
+			"id":"588bc26fdcf4e406",
+			"type":"text",
+			"text":"directory (from host)",
+			"styleAttributes":{},
+			"x":540,
+			"y":140,
+			"width":260,
+			"height":60
+		}
 	],
 	"edges":[
 		{
@@ -26,17 +46,29 @@
 			"toSide":"left"
 		},
 		{
-			"id":"82302a5ae154bb7b",
+			"id":"d688665a9e15a9f3",
 			"styleAttributes":{},
 			"toFloating":false,
-			"fromNode":"a651b763806e64cb",
+			"fromNode":"79ab1ccd895c9ae0",
 			"fromSide":"left",
 			"toNode":"d4585269f76700c1",
-			"toSide":"right"
+			"toSide":"bottom",
+			"label":"volume mount"
+		},
+		{
+			"id":"1c06cbf3c969bbca",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"588bc26fdcf4e406",
+			"fromSide":"left",
+			"toNode":"3de97a9201b90f75",
+			"toSide":"bottom",
+			"label":"bind mount"
 		}
 	],
 	"metadata":{
 		"version":"1.0-1.0",
-		"frontmatter":{}
+		"frontmatter":{},
+		"startNode":"f0b6eccae0114f06"
 	}
 }
