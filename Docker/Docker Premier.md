@@ -4,7 +4,7 @@
 - install
 - sudo docker permission
 - sudo systemctl enable docker
-- docker pull iso config
+- docker pull iso cHost (172.17.0.1)onfig
 - docker volume create xx
 - portainer (docker manager)
 - local::端号
@@ -34,12 +34,16 @@
 - docker stop container1 /  docker rm container1 停止，移除container1
 ```
 - `docker run -it --name container1 image1` 创建一个新容器，启动它的主程序
-
+- docker默认执行主程序
 
 # 4. Docker Data Persistence
 > container's removal doesn't affect data
 - Bind mount
 - Docker Volume
+
+# 5. Network
+> docker内部创建虚拟网络，通过端口映射
+
 
 # 5. Dev Container & Handoff Container
 

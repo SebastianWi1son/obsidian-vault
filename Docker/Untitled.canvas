@@ -1,8 +1,8 @@
 {
 	"nodes":[
-		{"id":"ea960c94dd6aea58","type":"group","x":-600,"y":-360,"width":2040,"height":960,"label":"Host"},
-		{"id":"d4585269f76700c1","type":"text","text":"Container-1","x":-125,"y":-180,"width":250,"height":60,"color":"5"},
-		{"id":"3de97a9201b90f75","type":"text","text":"Container-2","x":-125,"y":60,"width":250,"height":60,"color":"5"},
+		{"id":"ea960c94dd6aea58","type":"group","x":-600,"y":-360,"width":2040,"height":960,"label":"Host (ip: 172.17.0.1)"},
+		{"id":"d4585269f76700c1","type":"text","text":"Container-1\n(ip:172.17.0.2)","x":-125,"y":-180,"width":250,"height":60,"color":"5"},
+		{"id":"3de97a9201b90f75","type":"text","text":"Container-2\n(172.17.0.3)","x":-125,"y":60,"width":250,"height":60,"color":"5"},
 		{"id":"d51baa979b667a74","type":"text","text":"Image","x":-520,"y":-80,"width":220,"height":60,"color":"6"},
 		{
 			"id":"79ab1ccd895c9ae0",
