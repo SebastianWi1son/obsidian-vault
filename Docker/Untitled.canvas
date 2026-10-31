@@ -59,6 +59,7 @@
 			"id":"1c06cbf3c969bbca",
 			"styleAttributes":{},
 			"toFloating":false,
+			"fromFloating":false,
 			"fromNode":"588bc26fdcf4e406",
 			"fromSide":"left",
 			"toNode":"3de97a9201b90f75",
