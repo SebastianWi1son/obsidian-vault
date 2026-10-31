@@ -7,7 +7,7 @@
 - docker pull iso cHost (172.17.0.1)onfig
 - docker volume create xx
 - portainer (docker manager)
-- local::端号
+- local::port
   
 # 2. Docker Engine Architecture
 > image, container, volume, network 
