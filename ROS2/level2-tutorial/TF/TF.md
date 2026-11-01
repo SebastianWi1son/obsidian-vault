@@ -29,11 +29,12 @@ why using quaternion to describe pose?
 >  Description of all the elements in a robot
 >  **Used to generate TFs**
 >  XML format
+```xml
+
+```
 ## 2.2 RViz
 > Visualize the Robot on RViz
-
-
-# 3. Link
+## 2.3 Link
 > 一个刚性部件，内部相对位置固定，不会彼此运动
 ```xml
 <link name="base_link">
@@ -48,4 +49,8 @@ why using quaternion to describe pose?
 ```
 - 定义一个名为 `base_link` 的刚性部件
 - 用绿色长方体显示它
-![](assets/TF/file-20261101195438990.png)
+![425](assets/TF/file-20261101195438990.png)
+
+## 2.4 Policy
+- link的origin在底部
+- link的visual在中心
