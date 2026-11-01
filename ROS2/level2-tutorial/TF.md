@@ -1,5 +1,5 @@
 
-# 1. TF (TransForm)
+# 1. TF - TransForm
 ## 1.1 Purpose
 > Keep a structured tree for all the joints/frames over time
 

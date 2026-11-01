@@ -1,4 +1,7 @@
 {
   "theme": "obsidian",
-  "cssTheme": "GitHub Flavored Markdown"
+  "cssTheme": "GitHub Flavored Markdown",
+  "enabledCssSnippets": [
+    "wide-note"
+  ]
 }

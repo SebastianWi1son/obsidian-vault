@@ -3,5 +3,6 @@
   "alwaysUpdateLinks": true,
   "useMarkdownLinks": true,
   "newFileLocation": "root",
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "readableLineLength": true
 }
