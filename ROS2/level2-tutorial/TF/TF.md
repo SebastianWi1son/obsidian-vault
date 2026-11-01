@@ -151,3 +151,15 @@ joint type
 </robot>
 ```
 ![](assets/TF/file-20261101212734369.png)
+
+## 2.7 footprint
+> 为了描述平面运动，给车选一个位于地面上的参考点
+```xml
+<link name="base_footprint" />
+
+<joint name="base_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.1" rpy="0 0 0" />
+</joint>
+```
