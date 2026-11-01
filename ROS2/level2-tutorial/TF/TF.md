@@ -59,6 +59,11 @@ why using quaternion to describe pose?
 	<origin xyz="0 0 0.2" rpy="0 0 0" />
 </joint>
 ```
+joint type
+- fixed
+- revolute
+- continuous
+- prismatic
 ## 2.5 Policy
 - link的origin在底部
 - link的visual在中心
