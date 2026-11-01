@@ -67,3 +67,87 @@ joint type
 ## 2.5 Policy
 - link的origin在底部
 - link的visual在中心
+```xml
+<?xml version="1.0"?>
+
+<robot name="my_robot">
+
+<!--material-->
+
+<material name="blue">
+
+<color rgba="0 0 0.5 1" />
+
+</material>
+
+  
+
+<material name="grey">
+
+<color rgba="0.5 0.5 0.5 1" />
+
+</material>
+
+  
+
+<!--links-->
+
+<link name="base_link">
+
+<visual>
+
+<geometry>
+
+<box size="0.6 0.4 0.2" />
+
+</geometry>
+
+<origin xyz="0 0 0.1" rpy="0 0 0" />
+
+<material name="blue" />
+
+</visual>
+
+</link>
+
+  
+
+<link name="right_wheel_link">
+
+<visual>
+
+<geometry>
+
+<cylinder radius="0.1" length="0.05" />
+
+</geometry>
+
+<origin xyz="0 0 0" rpy="1.57 0 0" />
+
+<material name="grey" />
+
+</visual>
+
+</link>
+
+  
+
+<!--joints-->
+
+<joint name="base_right_wheel_joint" type="continuous">
+
+<parent link="base_link" />
+
+<child link="right_wheel_link" />
+
+<origin xyz="-0.15 -0.225 0" rpy="0 0 0" />
+
+<axis xyz="0 1 0" />
+
+</joint>
+
+  
+
+</robot>
+```
+![](assets/TF/file-20261101212734369.png)
