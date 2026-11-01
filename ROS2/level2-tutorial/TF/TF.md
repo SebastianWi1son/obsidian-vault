@@ -43,14 +43,22 @@ why using quaternion to describe pose?
             <box size="0.6 0.4 0.2" />
         </geometry>
         <origin xyz="0 0 0.1" rpy="0 0 0" />
-        <material name="green" />
+        <material name="blue" />
     </visual>
 </link>
 ```
 - 定义一个名为 `base_link` 的刚性部件
-- 用绿色长方体显示它
-![425](assets/TF/file-20261101195438990.png)
-
-## 2.4 Policy
+- 用蓝色长方体显示它
+![229](assets/TF/file-20261101195438990.png)
+## 2.4 joint
+> 两个link之间的连接
+```xml
+<joint name="base_second_joint" type="fixed">
+	<parent link="base_link" />
+	<child link="second_link" />
+	<origin xyz="0 0 0.2" rpy="0 0 0" />
+</joint>
+```
+## 2.5 Policy
 - link的origin在底部
 - link的visual在中心
