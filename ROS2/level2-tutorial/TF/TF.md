@@ -165,4 +165,5 @@ joint type
 ```
 
 # 3. Broadcast TFs
-URDF -> urdf_tutorial -> /tf
+
+![](assets/URDF.canvas)
