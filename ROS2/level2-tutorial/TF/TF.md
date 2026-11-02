@@ -163,3 +163,6 @@ joint type
     <origin xyz="0 0 0.1" rpy="0 0 0" />
 </joint>
 ```
+
+# 3. Broadcast TFs
+URDF -> urdf_tutorial -> /tf
