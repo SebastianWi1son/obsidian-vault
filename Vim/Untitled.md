@@ -1,4 +1,4 @@
-# 1. move
+# 1. Movement
 ## 1.1 当前行操作
 - `0`: 行首 
 - `$` (shift + 4): 行尾
@@ -22,5 +22,13 @@
 
 - `gg`: 回到文件最开头
 - `G`:  回到文件最末尾
+
+# 2. Mode Switch
+## 2.1 Insert
+- `i`: 当前光标所在字符之前insert
+- `a`: 当前光标所在字符之后insert
+
+- `I`: 当前行开头insert
+- `A`: 当前行末尾insert
 
 
