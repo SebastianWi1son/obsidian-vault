@@ -12,4 +12,9 @@
 ## 1.3 Electrical Rules Checker![](assets/KiCAD/file-20261106171410293.png)
 ![](assets/KiCAD/file-20261106171451953.png)
 
-## 1.4 ![](assets/KiCAD/file-20261106171538580.png)
+## 1.4 Page Setting![](assets/KiCAD/file-20261106171538580.png)
+> title & paper setting
+![](assets/KiCAD/file-20261106171643681.png)
+## 1.5 plot![](assets/KiCAD/file-20261106171718141.png)
+> Export
+![](assets/KiCAD/file-20261106171802615.png)
