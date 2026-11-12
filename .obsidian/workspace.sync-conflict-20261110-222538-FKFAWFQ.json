@@ -11,17 +11,14 @@
             "id": "9da0f3b7bbd29ce2",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Projects/Foucault/ArchitectureMap.canvas",
-                "viewState": {
-                  "x": 340,
-                  "y": 1580,
-                  "zoom": -1.4922053598013036
-                }
+                "file": "PCB/Kicad/Operation/Operation.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "ArchitectureMap"
+              "icon": "lucide-file",
+              "title": "Operation"
             }
           },
           {
@@ -30,19 +27,18 @@
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Projects/Lunokhod/ArchitectureMap.canvas",
+                "file": "Docker/Untitled.canvas",
                 "viewState": {
-                  "x": -32.99507956784579,
-                  "y": 100.8415219034751,
-                  "zoom": 0.3999999999999999
+                  "x": 379.54956576931085,
+                  "y": 28.194648908440854,
+                  "zoom": -0.6
                 }
               },
               "icon": "lucide-layout-dashboard",
-              "title": "ArchitectureMap"
+              "title": "Untitled"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,54 +206,63 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "63258c9c1f615aa8",
+  "active": "9da0f3b7bbd29ce2",
   "lastOpenFiles": [
-    "Git/branch.canvas",
-    "Git/Untitled.canvas",
-    "Git/Premier.md",
-    "Git",
-    "legacy/Linux/04-字体渲染与显示缩放.md",
-    "legacy/Linux/01-deb与包管理.md",
-    "legacy/Linux/06-Wayland截图与portal.md",
-    "legacy/Linux/05-fcitx5输入法架构.md",
-    "legacy/Linux/07-Linux剪贴板机制.md",
-    "legacy/Linux/02-配置文件的归属权.md",
-    "legacy/Linux/03-Wayland与X11架构.md",
-    "legacy/Linux/10-GNOME扩展开发.md",
-    "legacy/Linux/08-系统自省方法.md",
-    "legacy/Linux/09-跨系统数据摆渡与备份验证.md",
-    "legacy/Linux/00-索引.md",
-    "legacy/Linux",
-    "Untitled.canvas",
-    "win10-syncthing-方案B-交接文档.md",
-    "CPP/tutorial_llfc/cpp/C25-智能指针/SImpleSharedPtr.canvas",
-    "CPP/tutorial_llfc/cpp/C25-智能指针/Main.md",
-    "English/English_Knowledge_Points.md",
-    "CPP/tutorial_llfc/cpp/C25-智能指针",
-    "English/2026-08-07.md",
-    "English/2026-08-06.md",
+    "PCB/Kicad/Operation/assets/Operation/file-20261106192925853.png",
+    "PCB/Kicad/Operation/assets/Operation",
+    "PCB/Kicad/Operation/assets",
+    "PCB/Kicad/Tips/Tips.md",
+    "PCB/Kicad/Operation/Operation.md",
+    "PCB/Kicad/Operation",
+    "PCB/Kicad/Toolbar-Layout",
+    "PCB/Kicad/Toolbar-Schematics/KiCAD.md",
+    "PCB/Kicad/Tips",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD",
+    "PCB/Kicad/Toolbar-Schematics/assets",
+    "PCB/Kicad/Toolbar-Schematics",
+    "PCB/Tricks/note.md",
+    "PCB/Tricks/assets/note",
+    "PCB/Tricks/assets",
+    "Network/Main.md",
+    "Docker/Untitled.canvas",
+    "Docker/Docker ROS.md",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171802615.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171718141.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171643681.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171538580.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171451953.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171410293.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171341567.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171312074.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106171131836.png",
+    "PCB/Kicad/Toolbar-Schematics/assets/KiCAD/file-20261106170929685.png",
+    "Vim/Untitled.md",
+    "ROS2/level2-tutorial/TF/TF.md",
+    "ROS2/preview-tutorial/ROS2_TF_URDF_RViz_Gazebo_课程预览.md",
+    "ROS2/preview-tutorial/ROS2_Level1_Beginners_Jazzy_课程预览.md",
+    "Git/c4- repo hosting platform.md",
+    "ROS2/level2-tutorial/TF/assets/URDF.canvas",
+    "ROS2/level2-tutorial/URDF file.md",
+    "Docker/C1-Premier.md",
+    "Docker/C2-Stack.md",
+    "CMake/CMakeLists.txt.md",
     "Projects/Foucault/ArchitectureMap.canvas",
-    "Projects/Foucault/assets/Mahony PI控制器.md",
-    "Projects/Foucault/assets/struct IMUSample.md",
-    "Projects/Lunokhod/ArchitectureMap.canvas",
-    "Projects/Lunokhod/Main.md",
-    "Projects/Cyclotron/cyclotron/2026-08-23-alignment状态机开发经验.md",
-    "AI Develop/Untitled.md",
-    "Untitled 1.md",
-    "AI Develop",
     "Projects/Foucault/Main.md",
-    "Projects/Foucault/Schedule.canvas",
-    "Projects/Foucault/ArchitectureMap_v2.canvas",
-    "Projects/Foucault/assets/integrate().md",
-    "Projects/Foucault/assets",
-    "Projects/Foucault",
-    "Projects/Lunokhod",
-    "CMake/CMakeLists通用写法.canvas",
-    "ROS2/level1-tutorial/C8-Namespace",
-    "ROS2/level1-tutorial/C7-Launch",
-    "legacy/ObsidianVault-main/total.canvas",
-    "CPP/tutorial_llfc",
-    "legacy/ObsidianVault-main/motor_tune.canvas",
-    "ROS2/level1-tutorial/C2-ROS2 Tools/assets/Main/file-20260911143358074.png"
+    "Projects/Cyclotron/cyclotron/2026-08-23-Config职责边界.md",
+    "Projects/Lunokhod/ArchitectureMap.canvas",
+    "Git/c3-remote/Main.md",
+    "Git/c2-workflow/asset/跟进主分支.canvas",
+    "Git/c2-workflow/asset/rebase.canvas",
+    "Git/c2-workflow/Main.md",
+    "Git/c3-remote/git remote.md",
+    "Git/c1-premier/asset/branch.canvas",
+    "Git/c1-premier/asset/merge.canvas",
+    "Git/c1-premier/Main.md",
+    "Git/git remote/git remote.md",
+    "Git/git workflow/asset/rebase.canvas",
+    "Git/git workflow/asset/Untitled.canvas",
+    "Git/git workflow/Main.md",
+    "Git/git premier/Main.md",
+    "Git/Premier.md"
   ]
 }
