@@ -8,14 +8,16 @@
 
 ## 1.1 Physical Setup（物理模型与参数）
 
-本系统采用电枢控制的直流电机，励磁磁场恒定（Fixed field）：
-- **Electrical（电气部分）**：电枢输入电压 $V$（图中标注为 $v$）、电枢电阻 $R$、电枢电感 $L$、电枢电流 $i$、反电动势 $e$
+电枢控制的直流电机，励磁磁场恒定（Fixed field）：
+- **Electrical（电气部分）**：电枢输入电压 $v$、电枢电阻 $R$、电枢电感 $L$、电枢电流 $i$、反电动势 $e$
 - **Mechanical（机械部分）**：转子转动惯量 $J$、粘性阻尼系数 $b$、转角 $\theta$、角速度 $\omega = \dot{\theta}$、输出电磁转矩 $T$
 
 ![376](assets/Motor%20Speed%20System%20Analysis/file-20261126230708922.png)
 
 ### 物理关系（机电耦合）
-假设磁场恒定，电机输出转矩 $T$ 与电枢电流 $i$ 成正比，反电动势 $e$ 与转轴角速度 $\dot{\theta}$ 成正比：
+> 假设磁场恒定
+   电机输出转矩 $T$ 与电枢电流 $i$ 成正比
+   反电动势 $e$ 与转轴角速度 $\dot{\theta}$ 成正比：
 
 $$
 \begin{aligned}
@@ -29,21 +31,21 @@ $$
 
 ### 系统参数表
 
-| 符号 | 物理含义 | 数值 | 单位（SI） |
-| :---: | :--- | :---: | :--- |
-| $J$ | 转子转动惯量（Moment of inertia of the rotor） | $0.01$ | $\text{kg}\cdot\text{m}^2$ |
-| $b$ | 电机粘性阻尼系数（Motor viscous friction constant） | $0.1$ | $\text{N}\cdot\text{m}\cdot\text{s}$ |
-| $K_e$ | 反电动势常数（Electromotive force constant） | $0.01$ | $\text{V/rad/sec}$ |
-| $K_t$ | 电机转矩常数（Motor torque constant） | $0.01$ | $\text{N}\cdot\text{m/Amp}$ |
-| $R$ | 电枢电阻（Electric resistance） | $1$ | $\Omega$ |
-| $L$ | 电枢电感（Electric inductance） | $0.5$ | $\text{H}$ |
+|  符号   | 物理含义                                      |   数值   | 单位（SI）                               |
+| :---: | :---------------------------------------- | :----: | :----------------------------------- |
+|  $J$  | 转子转动惯量（Moment of inertia of the rotor）    | $0.01$ | $\text{kg}\cdot\text{m}^2$           |
+|  $b$  | 电机粘性阻尼系数（Motor viscous friction constant） | $0.1$  | $\text{N}\cdot\text{m}\cdot\text{s}$ |
+| $K_e$ | 反电动势常数（Electromotive force constant）      | $0.01$ | $\text{V/rad/sec}$                   |
+| $K_t$ | 电机转矩常数（Motor torque constant）             | $0.01$ | $\text{N}\cdot\text{m/Amp}$          |
+|  $R$  | 电枢电阻（Electric resistance）                 |  $1$   | $\Omega$                             |
+|  $L$  | 电枢电感（Electric inductance）                 | $0.5$  | $\text{H}$                           |
 
 - **系统输入（Input）**：电枢电压 $V$
 - **系统输出（Output）**：转轴角速度 $\dot{\theta}$（也常记作 $\omega$）
 
 ---
 
-## 1.2 System Equations（系统微分方程与数学模型）
+## 1.2 System Equations
 
 ### 1.2.1 时域微分方程
 
@@ -57,7 +59,7 @@ $$
 
 ---
 
-### 1.2.2 传递函数模型（Transfer Function）
+### 1.2.2 Transfer Function
 
 假设所有初始条件为零，对上述两个方程做 **拉普拉斯变换（Laplace Transform）**：
 
@@ -88,7 +90,7 @@ $$
 
 ---
 
-### 1.2.3 状态空间模型（State-Space）
+### 1.2.3 State-Space
 
 选取**转轴角速度 $\dot{\theta}$** 和**电枢电流 $i$** 作为状态变量：
 
