@@ -1,23 +1,23 @@
 # 1. Modeling
 
 > [!info] 参考资料
-> - 教程来源：[DC Motor Speed: System Modeling (UMich CTMS)](https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling)
-> - 研究对象：**电枢控制直流电机（Armature-controlled DC Motor）** 的转速系统建模
+> - 来源：[DC Motor Speed: System Modeling (UMich CTMS)](https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling)
+> - 对象：**电枢控制直流电机（Armature-controlled DC Motor）**
 
 ---
 
 ## 1.1 Physical Setup（物理模型与参数）
 
-电枢控制的直流电机，励磁磁场恒定（Fixed field）：
-- **Electrical（电气部分）**：电枢输入电压 $v$、电枢电阻 $R$、电枢电感 $L$、电枢电流 $i$、反电动势 $e$
-- **Mechanical（机械部分）**：转子转动惯量 $J$、粘性阻尼系数 $b$、转角 $\theta$、角速度 $\omega = \dot{\theta}$、输出电磁转矩 $T$
+电枢控制直流电机，励磁磁场恒定（Fixed field）：
+- **Electrical（电气）**：电枢电压 $v$、电阻 $R$、电感 $L$、电流 $i$、反电动势 $e$
+- **Mechanical（机械）**：转动惯量 $J$、粘性阻尼 $b$、转角 $\theta$、角速度 $\omega = \dot{\theta}$、转矩 $T$
 
 ![376](assets/Motor%20Speed%20System%20Analysis/file-20261126230708922.png)
 
 ### 物理关系（机电耦合）
-> 假设磁场恒定
-   电机输出转矩 $T$ 与电枢电流 $i$ 成正比
-   反电动势 $e$ 与转轴角速度 $\dot{\theta}$ 成正比：
+> 磁场恒定条件下：
+> - 转矩 $T$ 正比于电流 $i$
+> - 反电动势 $e$ 正比于角速度 $\dot{\theta}$
 
 $$
 \begin{aligned}
@@ -26,8 +26,27 @@ e &= K_e \dot{\theta}
 \end{aligned}
 $$
 
-> [!note] 国际单位制（SI）下的常数简化
-> 在 SI 单位制中，转矩常数 $K_t$ 与反电动势常数 $K_e$ 数值相等，因此后续推导统一记作 $K = K_t = K_e$。
+> [!note] 为什么 $K_t = K_e$？（能量守恒）
+> 电源总功率 $V i$ 分成三部分（KVL 乘以 $i$）：
+> $$
+> V i = i^2 R + \frac{d}{dt}\left(\frac{1}{2}Li^2\right) + e i
+> $$
+> - $i^2 R$：电阻发热（铜损）
+> - $\frac{d}{dt}(\frac{1}{2}Li^2)$：电感储能变化
+> - **$e i$：克服反电动势、真正转为机械功的电功率**
+>
+> 由能量守恒，这部分转换电功率 $P_{\text{conv}}$ 等于电磁机械功率 $P_{\text{mech}}$：
+> $$
+> \begin{aligned}
+> P_{\text{conv}} &= e i = (K_e \dot{\theta}) i \\
+> P_{\text{mech}} &= T \dot{\theta} = (K_t i) \dot{\theta}
+> \end{aligned}
+> $$
+> 令 $P_{\text{conv}} = P_{\text{mech}}$，得：
+> $$
+> K_e \dot{\theta} i = K_t i \dot{\theta} \implies K_e = K_t = K
+> $$
+> SI 单位下 $1\ \text{V}\cdot\text{s/rad} = 1\ \text{N}\cdot\text{m/A}$，数值相等。
 
 ### 系统参数表
 
@@ -40,8 +59,8 @@ $$
 |  $R$  | 电枢电阻（Electric resistance）                 |  $1$   | $\Omega$                             |
 |  $L$  | 电枢电感（Electric inductance）                 | $0.5$  | $\text{H}$                           |
 
-- **系统输入（Input）**：电枢电压 $V$
-- **系统输出（Output）**：转轴角速度 $\dot{\theta}$（也常记作 $\omega$）
+- **Input**：电枢电压 $V$
+- **Output**：转轴角速度 $\dot{\theta}$（或 $\omega$）
 
 ---
 
@@ -49,19 +68,49 @@ $$
 
 ### 1.2.1 时域微分方程
 
-分别对机械部分和电气部分列写动力学与电路方程：
+#### 1. 机械部分（牛顿第二定律）
+转子合外力矩等于转动惯量乘以角加速度：
 
-1. **机械部分（牛顿第二定律 / 转矩平衡）**：
-   $$J\ddot{\theta} + b\dot{\theta} = T = Ki$$
+$$
+J\ddot{\theta} = \sum \tau = T - T_{\text{friction}}
+$$
 
-2. **电气部分（基尔霍夫电压定律 KVL）**：
-   $$L\frac{di}{dt} + Ri = V - e = V - K\dot{\theta}$$
+代入 $T = Ki$ 和阻尼力矩 $T_{\text{friction}} = b\dot{\theta}$：
+
+$$
+J\ddot{\theta} + b\dot{\theta} = Ki
+$$
+
+#### 2. 电气部分（KVL）
+电枢回路满足基尔霍夫电压定律：
+
+$$
+V = V_R + V_L + e = Ri + L\frac{di}{dt} + K\dot{\theta}
+$$
+
+整理得：
+
+$$
+L\frac{di}{dt} + Ri = V - K\dot{\theta}
+$$
+
+#### 3. 方程汇总
+
+$$
+\begin{aligned}
+J\ddot{\theta} + b\dot{\theta} &= Ki \\
+L\frac{di}{dt} + Ri &= V - K\dot{\theta}
+\end{aligned}
+$$
 
 ---
 
 ### 1.2.2 Transfer Function
 
-假设所有初始条件为零，对上述两个方程做 **拉普拉斯变换（Laplace Transform）**：
+> 在 $s$ 域描述输入-输出关系，把微分方程化为代数方程
+> 适用于经典控制（极点分析、PID、频域/根轨迹设计）
+
+零初始条件下做**拉普拉斯变换**：
 
 $$
 \begin{aligned}
@@ -70,35 +119,28 @@ s(Js + b)\Theta(s) &= KI(s) \\
 \end{aligned}
 $$
 
-从第二个式子解出 $I(s) = \dfrac{V(s) - Ks\Theta(s)}{Ls + R}$，代入第一个式子消去中间变量 $I(s)$：
+消去 $I(s)$：
 
 $$
 s(Js + b)\Theta(s) = K \cdot \frac{V(s) - Ks\Theta(s)}{Ls + R}
 $$
 
-整理得到输入电压 $V(s)$ 到输出角速度 $\dot{\Theta}(s) = s\Theta(s)$ 的**开环传递函数**：
+得开环传递函数（输出角速度 $\dot{\Theta}(s) = s\Theta(s)$）：
 
 $$
 P(s) = \frac{\dot{\Theta}(s)}{V(s)} = \frac{K}{(Js + b)(Ls + R) + K^2} \quad \left[\frac{\text{rad/sec}}{\text{V}}\right]
-$$
-
-代入参数数值（$J=0.01,\ b=0.1,\ K=0.01,\ R=1,\ L=0.5$）：
-
-$$
-P(s) = \frac{0.01}{(0.01s + 0.1)(0.5s + 1) + 0.01^2} = \frac{0.01}{0.005s^2 + 0.06s + 0.1001}
 $$
 
 ---
 
 ### 1.2.3 State-Space
 
-选取**转轴角速度 $\dot{\theta}$** 和**电枢电流 $i$** 作为状态变量：
+> 在时域用一阶矩阵方程保留内部状态（如 $\dot{\theta}$ 与 $i$）
+> 支持非零初始条件、多输入多输出（MIMO）及现代控制（如状态反馈、LQR）
 
-$$
-\mathbf{x} = \begin{bmatrix} \dot{\theta} \\ i \end{bmatrix}, \quad u = V, \quad y = \dot{\theta}
-$$
+取状态向量 $\mathbf{x} = \begin{bmatrix} \dot{\theta} \\ i \end{bmatrix}$，输入 $u = V$，输出 $y = \dot{\theta}$。
 
-将时域微分方程改写为一阶微分方程组：
+改写为一阶方程组：
 
 $$
 \begin{aligned}
@@ -107,7 +149,7 @@ $$
 \end{aligned}
 $$
 
-写成标准状态空间矩阵形式 $\dot{\mathbf{x}} = A\mathbf{x} + Bu,\ y = C\mathbf{x} + Du$：
+矩阵形式（$\dot{\mathbf{x}} = A\mathbf{x} + Bu,\ y = C\mathbf{x} + Du$）：
 
 $$
 \frac{d}{dt}\begin{bmatrix} \dot{\theta} \\ i \end{bmatrix} =
@@ -129,49 +171,14 @@ $$
 
 ## 1.3 Design Requirements（设计要求）
 
-对于 **$1\ \text{rad/sec}$ 阶跃参考输入（Step Reference Input）**，闭环控制系统需要满足以下性能指标：
+针对 **$1\ \text{rad/sec}$ 阶跃输入**：
 
-| 性能指标 | 目标要求 | 物理意义 |
+| 性能指标 | 要求 | 说明 |
 | :--- | :---: | :--- |
-| **Settling time（调节时间）** | $< 2\ \text{s}$ | 电机启动或调速后能够快速稳定到目标转速 |
-| **Overshoot（超调量）** | $< 5\%$ | 避免转速过冲过大导致机械负载或设备损坏 |
-| **Steady-state error（稳态误差）** | $< 1\%$ | 确保稳态输出转速精确跟踪期望参考转速 |
+| **Settling time（调节时间）** | $< 2\ \text{s}$ | 快速稳定 |
+| **Overshoot（超调量）** | $< 5\%$ | 防止过冲损坏设备 |
+| **Steady-state error（稳态误差）** | $< 1\%$ | 稳态精确跟踪 |
 
-> [!tip] 为什么要设计控制器？
-> 由 1.2.2 的数值传递函数可知，开环直流增益为 $P(0) = \dfrac{0.01}{0.1001} \approx 0.1$，即输入 $1\ \text{V}$ 电压时稳态转速只有约 $0.1\ \text{rad/sec}$，远未达到要求，因此后续需要引入反馈控制器（如 PID 等）。
-
----
-
-## 1.4 MATLAB Representation（MATLAB 建模代码）
-
-### 方法一：传递函数（`tf`）
-
-```matlab
-J = 0.01;
-b = 0.1;
-K = 0.01;
-R = 1;
-L = 0.5;
-
-s = tf('s');
-P_motor = K / ((J*s + b)*(L*s + R) + K^2);
-```
-
-### 方法二：状态空间（`ss`）
-
-```matlab
-J = 0.01;
-b = 0.1;
-K = 0.01;
-R = 1;
-L = 0.5;
-
-A = [-b/J,  K/J;
-     -K/L, -R/L];
-B = [0;
-     1/L];
-C = [1, 0];
-D = 0;
-
-motor_ss = ss(A, B, C, D);
-```
+> [!tip] 为什么需要控制器？
+> 开环直流增益 $P(0) = \dfrac{0.01}{0.1001} \approx 0.1$（输入 $1\ \text{V}$ 仅得 $\approx 0.1\ \text{rad/sec}$）
+> 远未达到设计要求，需引入反馈控制
