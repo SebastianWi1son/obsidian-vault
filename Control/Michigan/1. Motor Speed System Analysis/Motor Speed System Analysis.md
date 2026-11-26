@@ -110,6 +110,27 @@ $$
 > 在 $s$ 域描述输入-输出关系，把微分方程化为代数方程
 > 适用于经典控制（极点分析、PID、频域/根轨迹设计）
 
+> [!note] 复习：拉普拉斯变换与微分规律
+> **1. 定义公式**
+> $$
+> \mathcal{L}\{f(t)\} = F(s) = \int_0^\infty f(t)e^{-st}\,dt
+> $$
+>
+> **2. 微分性质**
+> $$
+> \begin{aligned}
+> \mathcal{L}\{\dot{f}(t)\} &= sF(s) - f(0) \\
+> \mathcal{L}\{\ddot{f}(t)\} &= s^2F(s) - sf(0) - \dot{f}(0) \\
+> \mathcal{L}\{f^{(n)}(t)\} &= s^nF(s) - \sum_{k=0}^{n-1} s^{n-1-k}f^{(k)}(0)
+> \end{aligned}
+> $$
+>
+> **3. 零初始条件规律**（$f(0) = \dot{f}(0) = \cdots = 0$）
+> 每求一次导，对应乘一个 $s$（即 $\dfrac{d}{dt} \leftrightarrow s$）：
+> $$
+> \mathcal{L}\left\{\frac{d^n f(t)}{dt^n}\right\} = s^n F(s)
+> $$
+
 零初始条件下做**拉普拉斯变换**：
 
 $$
@@ -130,6 +151,13 @@ $$
 $$
 P(s) = \frac{\dot{\Theta}(s)}{V(s)} = \frac{K}{(Js + b)(Ls + R) + K^2} \quad \left[\frac{\text{rad/sec}}{\text{V}}\right]
 $$
+
+> [!info] 拓展： $P(s)$ 有什么用？
+> 1. 分母 $= 0$ 求极点，得到稳定性、收敛快慢与振荡特性
+>    分子 $= 0$ 求零点，得到超调变化与瞬态响应形状
+> 2. 令 $s = j\omega$，得到频率响应（Bode 图 / Nyquist 图）
+> 3. 用终值定理（$s \to 0$），得到直流增益 $P(0)$ 与稳态输出
+> 4. 构造闭环 $T(s) = \dfrac{C(s)P(s)}{1 + C(s)P(s)}$，设计控制器 $C(s)$ 满足性能指标
 
 ---
 
