@@ -4,5 +4,6 @@
   "useMarkdownLinks": true,
   "newFileLocation": "root",
   "newLinkFormat": "relative",
-  "readableLineLength": true
+  "readableLineLength": true,
+  "trashOption": "local"
 }
