@@ -1,23 +1,23 @@
 # 1. Modeling
 
-> [!info] 参考资料
-> - 来源：[DC Motor Speed: System Modeling (UMich CTMS)](https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling)
-> - 对象：**电枢控制直流电机（Armature-controlled DC Motor）**
+> [!info] Reference
+> - Source: [DC Motor Speed: System Modeling (UMich CTMS)](https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling)
+> - System: **Armature-controlled DC Motor**
 
 ---
 
-## 1.1 Physical Setup（物理模型与参数）
+## 1.1 Physical Setup
 
-电枢控制直流电机，励磁磁场恒定（Fixed field）：
-- **Electrical（电气）**：电枢电压 $v$、电阻 $R$、电感 $L$、电流 $i$、反电动势 $e$
-- **Mechanical（机械）**：转动惯量 $J$、粘性阻尼 $b$、转角 $\theta$、角速度 $\omega = \dot{\theta}$、转矩 $T$
+Armature-controlled DC motor with a fixed magnetic field:
+- **Electrical**: armature voltage $v$, resistance $R$, inductance $L$, current $i$, back EMF $e$
+- **Mechanical**: rotor inertia $J$, viscous friction $b$, angle $\theta$, angular speed $\omega = \dot{\theta}$, torque $T$
 
 ![376](assets/Motor%20Speed%20System%20Analysis/file-20261126230708922.png)
 
-### 物理关系（机电耦合）
-> 磁场恒定条件下：
-> - 转矩 $T$ 正比于电流 $i$
-> - 反电动势 $e$ 正比于角速度 $\dot{\theta}$
+### Physical Relations (Electromechanical Coupling)
+> With a fixed magnetic field:
+> - Torque $T$ is proportional to current $i$
+> - Back EMF $e$ is proportional to angular speed $\dot{\theta}$
 
 $$
 \begin{aligned}
@@ -26,75 +26,75 @@ e &= K_e \dot{\theta}
 \end{aligned}
 $$
 
-> [!note] 为什么 $K_t = K_e$？（能量守恒）
-> 电源总功率 $V i$ 分成三部分（KVL 乘以 $i$）：
+> [!note] Why $K_t = K_e$? (Conservation of Energy)
+> Total supply power $V i$ splits into three parts (multiplying KVL by $i$):
 > $$
 > V i = i^2 R + \frac{d}{dt}\left(\frac{1}{2}Li^2\right) + e i
 > $$
-> - $i^2 R$：电阻发热（铜损）
-> - $\frac{d}{dt}(\frac{1}{2}Li^2)$：电感储能变化
-> - **$e i$：克服反电动势、真正转为机械功的电功率**
+> - $i^2 R$: resistive heat loss (copper loss)
+> - $\frac{d}{dt}(\frac{1}{2}Li^2)$: rate of magnetic energy stored in $L$
+> - **$e i$: electrical power overcoming back EMF and converted to mechanical work**
 >
-> 由能量守恒，这部分转换电功率 $P_{\text{conv}}$ 等于电磁机械功率 $P_{\text{mech}}$：
+> By conservation of energy, the converted power $P_{\text{conv}}$ equals the mechanical power $P_{\text{mech}}$:
 > $$
 > \begin{aligned}
 > P_{\text{conv}} &= e i = (K_e \dot{\theta}) i \\
 > P_{\text{mech}} &= T \dot{\theta} = (K_t i) \dot{\theta}
 > \end{aligned}
 > $$
-> 令 $P_{\text{conv}} = P_{\text{mech}}$，得：
+> Setting $P_{\text{conv}} = P_{\text{mech}}$ gives:
 > $$
 > K_e \dot{\theta} i = K_t i \dot{\theta} \implies K_e = K_t = K
 > $$
-> SI 单位下 $1\ \text{V}\cdot\text{s/rad} = 1\ \text{N}\cdot\text{m/A}$，数值相等。
+> In SI units, $1\ \text{V}\cdot\text{s/rad} = 1\ \text{N}\cdot\text{m/A}$, so they are numerically equal.
 
-### 系统参数表
+### System Parameters
 
-|  符号   | 物理含义                                      |   数值   | 单位（SI）                               |
-| :---: | :---------------------------------------- | :----: | :----------------------------------- |
-|  $J$  | 转子转动惯量（Moment of inertia of the rotor）    | $0.01$ | $\text{kg}\cdot\text{m}^2$           |
-|  $b$  | 电机粘性阻尼系数（Motor viscous friction constant） | $0.1$  | $\text{N}\cdot\text{m}\cdot\text{s}$ |
-| $K_e$ | 反电动势常数（Electromotive force constant）      | $0.01$ | $\text{V/rad/sec}$                   |
-| $K_t$ | 电机转矩常数（Motor torque constant）             | $0.01$ | $\text{N}\cdot\text{m/Amp}$          |
-|  $R$  | 电枢电阻（Electric resistance）                 |  $1$   | $\Omega$                             |
-|  $L$  | 电枢电感（Electric inductance）                 | $0.5$  | $\text{H}$                           |
+| Symbol | Description | Value | Units (SI) |
+| :---: | :--- | :---: | :--- |
+| $J$ | Moment of inertia of the rotor | $0.01$ | $\text{kg}\cdot\text{m}^2$ |
+| $b$ | Motor viscous friction constant | $0.1$ | $\text{N}\cdot\text{m}\cdot\text{s}$ |
+| $K_e$ | Electromotive force constant | $0.01$ | $\text{V/rad/sec}$ |
+| $K_t$ | Motor torque constant | $0.01$ | $\text{N}\cdot\text{m/Amp}$ |
+| $R$ | Electric resistance | $1$ | $\Omega$ |
+| $L$ | Electric inductance | $0.5$ | $\text{H}$ |
 
-- **Input**：电枢电压 $V$
-- **Output**：转轴角速度 $\dot{\theta}$（或 $\omega$）
+- **Input**: armature voltage $V$
+- **Output**: shaft angular speed $\dot{\theta}$ (or $\omega$)
 
 ---
 
 ## 1.2 System Equations
 
-### 1.2.1 时域微分方程
+### 1.2.1 Time-Domain Differential Equations
 
-#### 1. 机械部分（牛顿第二定律）
-转子合外力矩等于转动惯量乘以角加速度：
+#### 1. Mechanical Part (Newton's 2nd Law)
+Net torque equals rotor inertia times angular acceleration:
 
 $$
 J\ddot{\theta} = \sum \tau = T - T_{\text{friction}}
 $$
 
-代入 $T = Ki$ 和阻尼力矩 $T_{\text{friction}} = b\dot{\theta}$：
+Substitute $T = Ki$ and damping torque $T_{\text{friction}} = b\dot{\theta}$:
 
 $$
 J\ddot{\theta} + b\dot{\theta} = Ki
 $$
 
-#### 2. 电气部分（KVL）
-电枢回路满足基尔霍夫电压定律：
+#### 2. Electrical Part (KVL)
+The armature loop satisfies Kirchhoff's Voltage Law:
 
 $$
 V = V_R + V_L + e = Ri + L\frac{di}{dt} + K\dot{\theta}
 $$
 
-整理得：
+Rearranging gives:
 
 $$
 L\frac{di}{dt} + Ri = V - K\dot{\theta}
 $$
 
-#### 3. 方程汇总
+#### 3. Summary of Equations
 
 $$
 \begin{aligned}
@@ -107,16 +107,16 @@ $$
 
 ### 1.2.2 Transfer Function
 
-> 在 $s$ 域描述输入-输出关系，把微分方程化为代数方程
-> 适用于经典控制（极点分析、PID、频域/根轨迹设计）
+> Describes the input-output relation in the $s$-domain and turns ODEs into algebraic equations
+> Used for classical control (pole analysis, PID, frequency response / root locus)
 
-> [!note] 复习：拉普拉斯变换与微分规律
-> **1. 定义公式**
+> [!note] Review: Laplace Transform & Differentiation Rule
+> **1. Definition**
 > $$
 > \mathcal{L}\{f(t)\} = F(s) = \int_0^\infty f(t)e^{-st}\,dt
 > $$
 >
-> **2. 微分性质**
+> **2. Differentiation Property** (zero initial conditions: $f(0)=\dot{f}(0)=\cdots=0 \implies \dfrac{d^n}{dt^n} \leftrightarrow s^n$)
 > $$
 > \begin{aligned}
 > \mathcal{L}\{\dot{f}(t)\} &= sF(s) - f(0) \\
@@ -124,14 +124,8 @@ $$
 > \mathcal{L}\{f^{(n)}(t)\} &= s^nF(s) - \sum_{k=0}^{n-1} s^{n-1-k}f^{(k)}(0)
 > \end{aligned}
 > $$
->
-> **3. 零初始条件规律**（$f(0) = \dot{f}(0) = \cdots = 0$）
-> 每求一次导，对应乘一个 $s$（即 $\dfrac{d}{dt} \leftrightarrow s$）：
-> $$
-> \mathcal{L}\left\{\frac{d^n f(t)}{dt^n}\right\} = s^n F(s)
-> $$
 
-零初始条件下做**拉普拉斯变换**：
+Take the **Laplace transform** assuming zero initial conditions:
 
 $$
 \begin{aligned}
@@ -140,35 +134,52 @@ s(Js + b)\Theta(s) &= KI(s) \\
 \end{aligned}
 $$
 
-消去 $I(s)$：
+Eliminate $I(s)$:
 
 $$
 s(Js + b)\Theta(s) = K \cdot \frac{V(s) - Ks\Theta(s)}{Ls + R}
 $$
 
-得开环传递函数（输出角速度 $\dot{\Theta}(s) = s\Theta(s)$）：
+Open-loop transfer function (output is angular speed $\dot{\Theta}(s) = s\Theta(s)$):
 
 $$
 P(s) = \frac{\dot{\Theta}(s)}{V(s)} = \frac{K}{(Js + b)(Ls + R) + K^2} \quad \left[\frac{\text{rad/sec}}{\text{V}}\right]
 $$
 
-> [!info] 拓展： $P(s)$ 有什么用？
-> 1. 分母 $= 0$ 求极点，得到稳定性、收敛快慢与振荡特性
->    分子 $= 0$ 求零点，得到超调变化与瞬态响应形状
-> 2. 令 $s = j\omega$，得到频率响应（Bode 图 / Nyquist 图）
-> 3. 用终值定理（$s \to 0$），得到直流增益 $P(0)$ 与稳态输出
-> 4. 构造闭环 $T(s) = \dfrac{C(s)P(s)}{1 + C(s)P(s)}$，设计控制器 $C(s)$ 满足性能指标
+> [!info] Extension: What can we do with $P(s)$?
+> 1. Set denominator $= 0$ for poles $\rightarrow$ stability, settling speed, and oscillation
+>    Set numerator $= 0$ for zeros $\rightarrow$ overshoot and transient shape
+> 2. Set $s = j\omega$ $\rightarrow$ frequency response (Bode / Nyquist plots)
+> 3. Apply Final Value Theorem ($s \to 0$) $\rightarrow$ DC gain $P(0)$ and steady-state output
+> 4. Form closed-loop $T(s) = \dfrac{C(s)P(s)}{1 + C(s)P(s)}$ $\rightarrow$ design controller $C(s)$ to meet specs
 
 ---
 
 ### 1.2.3 State-Space
 
-> 在时域用一阶矩阵方程保留内部状态（如 $\dot{\theta}$ 与 $i$）
-> 支持非零初始条件、多输入多输出（MIMO）及现代控制（如状态反馈、LQR）
+> Keeps internal states (e.g., $\dot{\theta}$ and $i$) via first-order matrix ODEs in the time domain
+> Supports non-zero initial conditions, MIMO systems, and modern control (state feedback, LQR)
 
-取状态向量 $\mathbf{x} = \begin{bmatrix} \dot{\theta} \\ i \end{bmatrix}$，输入 $u = V$，输出 $y = \dot{\theta}$。
+> [!note] Review: Standard State-Space Form
+> **1. Two Standard Equations**
+> $$
+> \begin{aligned}
+> \dot{\mathbf{x}} &= A\mathbf{x} + Bu \\
+> y &= C\mathbf{x} + Du
+> \end{aligned}
+> $$
+> - **State equation** ($\dot{\mathbf{x}} = A\mathbf{x} + Bu$): describes how internal state $\mathbf{x}$ evolves over time
+> - **Output equation** ($y = C\mathbf{x} + Du$): describes how output $y$ is obtained from state and input
+>
+> **2. Four Matrices ($A, B, C, D$)**
+> - **$A$ (State matrix)**: how current state $\mathbf{x}$ affects $\dot{\mathbf{x}}$ (natural dynamics and stability)
+> - **$B$ (Input matrix)**: how input $u$ drives state change $\dot{\mathbf{x}}$
+> - **$C$ (Output matrix)**: how output $y$ is extracted from state $\mathbf{x}$
+> - **$D$ (Feedthrough matrix)**: direct effect of input $u$ on output $y$ (typically $0$ in physical systems)
 
-改写为一阶方程组：
+Choose state vector $\mathbf{x} = \begin{bmatrix} \dot{\theta} \\ i \end{bmatrix}$, input $u = V$, output $y = \dot{\theta}$.
+
+Rewrite as first-order differential equations:
 
 $$
 \begin{aligned}
@@ -177,7 +188,7 @@ $$
 \end{aligned}
 $$
 
-矩阵形式（$\dot{\mathbf{x}} = A\mathbf{x} + Bu,\ y = C\mathbf{x} + Du$）：
+Matrix form ($\dot{\mathbf{x}} = A\mathbf{x} + Bu,\ y = C\mathbf{x} + Du$):
 
 $$
 \frac{d}{dt}\begin{bmatrix} \dot{\theta} \\ i \end{bmatrix} =
@@ -197,16 +208,69 @@ $$
 
 ---
 
-## 1.3 Design Requirements（设计要求）
+## 1.3 Design Requirements
 
-针对 **$1\ \text{rad/sec}$ 阶跃输入**：
+For a **$1\ \text{rad/sec}$ step input**:
 
-| 性能指标 | 要求 | 说明 |
+| Metric | Requirement | Note |
 | :--- | :---: | :--- |
-| **Settling time（调节时间）** | $< 2\ \text{s}$ | 快速稳定 |
-| **Overshoot（超调量）** | $< 5\%$ | 防止过冲损坏设备 |
-| **Steady-state error（稳态误差）** | $< 1\%$ | 稳态精确跟踪 |
+| **Settling time** | $< 2\ \text{s}$ | Fast stabilization |
+| **Overshoot** | $< 5\%$ | Prevent hardware damage |
+| **Steady-state error** | $< 1\%$ | Accurate steady-state tracking |
 
-> [!tip] 为什么需要控制器？
-> 开环直流增益 $P(0) = \dfrac{0.01}{0.1001} \approx 0.1$（输入 $1\ \text{V}$ 仅得 $\approx 0.1\ \text{rad/sec}$）
-> 远未达到设计要求，需引入反馈控制
+> [!tip] Why do we need a controller?
+> Open-loop DC gain $P(0) = \dfrac{0.01}{0.1001} \approx 0.1$ ($1\ \text{V}$ input gives only $\approx 0.1\ \text{rad/sec}$)
+> Far from meeting specs, so feedback control is required
+
+---
+
+## Vocabulary
+
+### 1.1 Physical Setup
+| Word | Pronunciation (US) | Meaning |
+| :--- | :--- | :--- |
+| **armature** | /ˈɑːrmətʃər/ | 电枢 |
+| **rotor** | /ˈroʊtər/ | 转子 |
+| **shaft** | /ʃæft/ | 轴；转轴 |
+| **inertia** | /ɪˈnɜːrʃə/ | 惯量（*moment of inertia* 转动惯量） |
+| **viscous** | /ˈvɪskəs/ | 粘性的 |
+| **friction** | /ˈfrɪkʃən/ | 摩擦；阻尼 |
+| **damping** | /ˈdæmpɪŋ/ | 阻尼；衰减 |
+| **torque** | /tɔːrk/ | 转矩；力矩 |
+| **resistance** | /rɪˈzɪstəns/ | 电阻 |
+| **inductance** | /ɪnˈdʌktəns/ | 电感 |
+| **electromotive** | /ɪˌlektroʊˈmoʊtɪv/ | 电动势的（*back EMF* 反电动势） |
+| **proportional** | /prəˈpɔːrʃənl/ | 成正比的 |
+| **coupling** | /ˈkʌplɪŋ/ | 耦合 |
+
+### 1.2 Equations, Transfer Function & State-Space
+| Word | Pronunciation (US) | Meaning |
+| :--- | :--- | :--- |
+| **differential** | /ˌdɪfəˈrenʃəl/ | 微分的（*ODE* 常微分方程） |
+| **algebraic** | /ˌældʒɪˈbreɪɪk/ | 代数的 |
+| **eliminate** | /ɪˈlɪmɪneɪt/ | 消去；消除 |
+| **loop** | /luːp/ | 回路；环（*open-loop* 开环 / *closed-loop* 闭环） |
+| **denominator** | /dɪˈnɑːmɪneɪtər/ | 分母 |
+| **numerator** | /ˈnuːməreɪtər/ | 分子 |
+| **pole** | /poʊl/ | 极点 |
+| **zero** | /ˈzɪroʊ/ | 零点 |
+| **oscillation** | /ˌɑːsɪˈleɪʃən/ | 振荡 |
+| **frequency** | /ˈfriːkwənsi/ | 频率 |
+| **locus** | /ˈloʊkəs/ | 轨迹（*root locus* 根轨迹） |
+| **transient** | /ˈtrænziənt/ | 瞬态的；暂态的 |
+| **steady-state** | /ˌstedi ˈsteɪt/ | 稳态的 |
+| **theorem** | /ˈθiːərəm/ | 定理（*Final Value Theorem* 终值定理） |
+| **gain** | /ɡeɪn/ | 增益（*DC gain* 直流增益） |
+| **evolve** | /ɪˈvɑːlv/ | 演化；随时间变化 |
+| **extract** | /ɪkˈstrækt/ | 提取；抽取 |
+| **feedthrough** | /ˈfiːdθruː/ | 直通；前馈直通 |
+
+### 1.3 Design Requirements
+| Word | Pronunciation (US) | Meaning |
+| :--- | :--- | :--- |
+| **step input** | /step ˈɪnpʊt/ | 阶跃输入 |
+| **settling time** | /ˈsetlɪŋ taɪm/ | 调节时间 |
+| **stabilization** | /ˌsteɪbəlaɪˈzeɪʃən/ | 稳定化；趋于稳定 |
+| **overshoot** | /ˌoʊvərˈʃuːt/ | 超调（量） |
+| **tracking** | /ˈtrækɪŋ/ | 跟踪；追踪 |
+| **feedback** | /ˈfiːdbæk/ | 反馈 |

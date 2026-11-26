@@ -1,0 +1,10 @@
+- equivalent
+- circuit
+- translational motion
+- armature
+- diagram
+- shaft
+- viscous friction
+- proportional
+- moment of inertia
+- electrimotive
