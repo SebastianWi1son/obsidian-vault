@@ -3,5 +3,6 @@
   "cssTheme": "GitHub Flavored Markdown",
   "enabledCssSnippets": [
     "wide-note"
-  ]
+  ],
+  "showRibbon": true
 }
